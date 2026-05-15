@@ -41,10 +41,10 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .hero-greeting { display: flex; align-items: center; gap: 0.5rem; color: var(--sage); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; }
 .greeting-wave { font-size: 1.2rem; animation: wave 2.5s infinite; transform-origin: 70% 70%; }
 @keyframes wave { 0% { transform: rotate( 0.0deg) } 10% { transform: rotate(14.0deg) } 20% { transform: rotate(-8.0deg) } 30% { transform: rotate(14.0deg) } 40% { transform: rotate(-4.0deg) } 50% { transform: rotate(10.0deg) } 60% { transform: rotate( 0.0deg) } 100% { transform: rotate( 0.0deg) } }
-.highlight-green { color: var(--sage); position: relative; display: inline-block; line-height: 1.05; z-index: 1; }
+.highlight-green { color: var(--sage); position: relative; display: inline-block; line-height: 1.08; z-index: 1; }
 .highlight-orange { color: var(--orange); }
-.squiggle { position: absolute; left: 0; bottom: -0.24em; width: 100%; height: 0.28em; pointer-events: none; z-index: 0; overflow: visible; }
-.highlight-green .squiggle path { stroke-width: 3; }
+.squiggle { position: absolute; left: -0.04em; bottom: -0.18em; width: 108%; height: 0.42em; pointer-events: none; z-index: -1; overflow: visible; }
+.highlight-green .squiggle path { stroke-width: 4; stroke-linecap: round; }
 .hero-copy p { font-size: 1.05rem; color: #4a4a4a; max-width: 90%; }
 .btn { border-radius: 999px; padding: .8rem 1.5rem; text-decoration: none; font-weight:600; display:inline-flex; align-items: center; gap: 0.5rem; transition: transform .25s ease, box-shadow .25s ease; font-size: 0.95rem; }
 .btn:hover { transform: translateY(-3px) scale(1.01); }
@@ -220,6 +220,18 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   }
 }
 
+
+@media (max-width: 420px) {
+  .squiggle {
+    bottom: -0.12em;
+    height: 0.34em;
+  }
+
+  .highlight-green .squiggle path {
+    stroke-width: 3;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-photo-wrap::before {
     animation: none !important;
@@ -392,8 +404,8 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   .plant-illustration { right: -20px; bottom: -20px; opacity: 0.4; z-index: 0; }
   .hero-grid, .about-skills-split { grid-template-columns: 1fr; gap: 2rem; }
   .hero-copy h1 { max-width: 100%; }
-  .squiggle { bottom: -0.2em; height: 0.24em; }
-  .highlight-green .squiggle path { stroke-width: 2.5; }
+  .squiggle { left: -0.03em; bottom: -0.14em; width: 106%; height: 0.38em; }
+  .highlight-green .squiggle path { stroke-width: 3.5; }
   .project-grid { grid-template-columns: 1fr; gap: 2rem; }
   .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .garden-leaf { display: none; }
