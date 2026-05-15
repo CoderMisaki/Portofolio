@@ -29,6 +29,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.getElementById('main-nav');
 const emailLink = document.getElementById('email-link');
 const linkedInLink = document.getElementById('linkedin-link');
+const githubLink = document.getElementById('github-link');
 
 projectList.innerHTML = projects
   .map(
@@ -112,4 +113,8 @@ if (emailLink) {
 if (linkedInLink) {
   const profile = ['muhammad', 'fadilah', '7b6898243'].join('-');
   linkedInLink.setAttribute('href', `https://www.linkedin.com/in/${profile}`);
+}
+
+if (githubLink) {
+  githubLink.setAttribute('href', 'https://github.com/CoderMisaki/');
 }
