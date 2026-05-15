@@ -4,6 +4,8 @@ const projectList = document.getElementById('project-list');
 const cursorGlow = document.querySelector('.cursor-glow');
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.getElementById('main-nav');
+const emailLink = document.getElementById('email-link');
+const linkedInLink = document.getElementById('linkedin-link');
 
 projectList.innerHTML = projects
   .map(
@@ -71,4 +73,14 @@ if (window.matchMedia('(pointer: fine)').matches) {
       rafId = window.requestAnimationFrame(updateGlow);
     }
   });
+}
+
+if (emailLink) {
+  const mailbox = ['echo', 'mfadillah.eu.cc'].join('@');
+  emailLink.setAttribute('href', `mailto:${mailbox}`);
+}
+
+if (linkedInLink) {
+  const profile = ['muhammad', 'fadilah', '7b6898243'].join('-');
+  linkedInLink.setAttribute('href', `https://www.linkedin.com/in/${profile}`);
 }
