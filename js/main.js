@@ -18,10 +18,31 @@ const escapeHTML = (str) => {
 
 // Validate URL protocol to prevent javascript: XSS
 const sanitizeURL = (url) => {
-  const str = String(url);
-  if (str.toLowerCase().trim().startsWith('javascript:')) {
+  const str = String(url).trim();
+  const normalized = str.toLowerCase().replace(/[\x00-\x20]/g, '');
+
+  let decoded = normalized;
+  try {
+    decoded = decodeURIComponent(normalized);
+  } catch (_) {
+    decoded = normalized;
+  }
+
+  if (decoded.startsWith('javascript:') || decoded.startsWith('data:')) {
     return 'about:blank';
   }
+
+  try {
+    const parsed = new URL(str, window.location.origin);
+    if (parsed.protocol === 'javascript:' || parsed.protocol === 'data:') {
+      return 'about:blank';
+    }
+  } catch (_) {
+    if (normalized.startsWith('javascript:') || normalized.startsWith('data:')) {
+      return 'about:blank';
+    }
+  }
+
   return str;
 };
 const cursorGlow = document.querySelector('.cursor-glow');
@@ -42,7 +63,7 @@ projectList.innerHTML = projects
             title="Preview ${escapeHTML(project.name)}"
             loading="lazy"
             referrerpolicy="no-referrer"
-            sandbox="allow-scripts allow-same-origin"
+            sandbox="allow-scripts"
           ></iframe>
         </div>
         <div class="works-content">
@@ -89,9 +110,6 @@ if (window.matchMedia('(pointer: fine)').matches) {
   let pointerY = 0;
 
   const updateGlow = () => {
-    // ⚡ Bolt Performance Optimization:
-    // Using transform: translate3d instead of top/left to use GPU acceleration
-    // and avoid layout thrashing on every frame
     cursorGlow.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
     rafId = null;
   };
