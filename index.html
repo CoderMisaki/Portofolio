@@ -8,12 +8,47 @@
       name="description"
       content="Portfolio Muhammad Fadillah, Web Developer & AI Automation Enthusiast focused on responsive websites, API integration, troubleshooting, and practical digital solutions."
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#FAFAF7" />
+    <link rel="canonical" href="https://ice-chi-75.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Muhammad Fadillah | Web Developer & AI Automation Enthusiast" />
+    <meta property="og:description" content="Portfolio of Muhammad Fadillah, focused on responsive websites, API integration, troubleshooting, and practical digital solutions." />
+    <meta property="og:url" content="https://ice-chi-75.vercel.app/" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Muhammad Fadillah | Web Developer & AI Automation Enthusiast" />
+    <meta name="twitter:description" content="Responsive websites, API integration, troubleshooting, and practical digital solutions." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Fadillah",
+        "jobTitle": "Web Developer & AI Automation Enthusiast",
+        "email": "mailto:echo@mfadillah.eu.cc",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jakarta",
+          "addressCountry": "ID"
+        },
+        "url": "https://ice-chi-75.vercel.app/",
+        "sameAs": ["https://github.com/CoderMisaki/"],
+        "knowsAbout": [
+          "Web Development",
+          "API Integration",
+          "AI Automation",
+          "Troubleshooting",
+          "Data Management"
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -24,7 +59,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
 
-        <nav id="main-nav" aria-label="Navigasi utama">
+        <nav id="main-nav" aria-label="Main navigation">
           <a href="#hero">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Works</a>
@@ -38,7 +73,7 @@
             Let's Talk
             <span class="icon-arrow">↗</span>
           </a>
-          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka navigasi">
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">
             ☰
           </button>
         </div>
@@ -68,7 +103,7 @@
                 View My Works
                 <span class="icon-arrow">↗</span>
               </a>
-              <a class="btn btn-secondary btn-cv" href="https://drive.google.com/uc?export=download&id=1MNTDYtm-GGRpvyOx5NZyAf50BTJeGDfv" rel="noreferrer noopener">
+              <a class="btn btn-secondary btn-cv" href="https://drive.google.com/uc?export=download&id=1MNTDYtm-GGRpvyOx5NZyAf50BTJeGDfv" target="_blank" rel="noreferrer noopener nofollow">
                 Download CV
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 15V3M12 15L8 11M12 15L16 11M4 21H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -152,7 +187,7 @@
 
             <div class="hero-photo-wrap">
               <div class="blob-bg"></div>
-              <img src="images/my_photo_nobg.png" alt="Muhammad Fadillah" loading="lazy" />
+              <img src="images/my_photo_nobg.png" alt="Portrait of Muhammad Fadillah" loading="eager" fetchpriority="high" width="420" height="560" />
             </div>
 
             <div class="stats-bar">
@@ -344,7 +379,7 @@
                 I'm open to web development, automation, and digital workflow projects.<br>
                 Let's discuss how I can help with your idea.
               </p>
-              <a class="btn btn-primary btn-get-in-touch" href="#email-link">
+              <a class="btn btn-primary btn-get-in-touch" href="mailto:echo@mfadillah.eu.cc">
                 Get In Touch
                 <span class="icon-arrow">↗</span>
               </a>
@@ -366,7 +401,7 @@
                   </div>
                   <div class="contact-text">
                     <span class="contact-label">Email</span>
-                    <a id="email-link" href="#" class="contact-value">echo@mfadillah.eu.cc</a>
+                    <a id="email-link" href="mailto:echo@mfadillah.eu.cc" class="contact-value">echo@mfadillah.eu.cc</a>
                   </div>
                 </div>
 
