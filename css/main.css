@@ -63,6 +63,13 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   background: #fff;
 }
 .contact-card { text-align: center; background: linear-gradient(145deg, #fffef2, #f5fff5); }
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
 .garden-leaf { position: fixed; border-radius: 60% 40% 65% 35%; opacity: .25; pointer-events: none; }
 .leaf-a { width: 120px; height: 80px; right: 5%; top: 22%; background: var(--sage); animation: float 7s ease-in-out infinite; }
 .leaf-b { width: 90px; height: 70px; left: 3%; top: 62%; background: var(--yellow); animation: float 9s ease-in-out infinite; }
