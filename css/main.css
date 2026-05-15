@@ -53,47 +53,171 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .hero-photo-wrap {
   position: relative;
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
   aspect-ratio: 3 / 4;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   margin-bottom: 2rem;
   z-index: 1;
+  isolation: isolate;
+  filter: drop-shadow(0 22px 35px rgba(26, 26, 26, 0.12));
+}
+
+.hero-photo-wrap::before {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 88%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(-2deg);
+  border-radius: 46% 54% 28% 72% / 54% 48% 52% 46%;
+  background:
+    radial-gradient(circle at 22% 20%, rgba(255, 201, 60, 0.95) 0 13%, transparent 34%),
+    radial-gradient(circle at 82% 28%, rgba(255, 138, 0, 0.7) 0 12%, transparent 34%),
+    radial-gradient(circle at 70% 82%, rgba(76, 175, 80, 0.75) 0 18%, transparent 38%),
+    conic-gradient(
+      from 145deg,
+      #4caf50,
+      #ffc93c,
+      #ff8a00,
+      #f7e7b8,
+      #4caf50
+    );
+  opacity: 0.95;
+  z-index: -3;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 24px 60px rgba(76, 175, 80, 0.22);
+  animation: blobBreath 8s ease-in-out infinite;
+}
+
+.hero-photo-wrap::after {
+  content: "";
+  position: absolute;
+  width: 82%;
+  height: 72%;
+  right: -18%;
+  bottom: 12%;
+  border-radius: 999px;
+  background: rgba(255, 201, 60, 0.28);
+  filter: blur(18px);
+  z-index: -4;
+  transform: rotate(-12deg);
 }
 
 .blob-bg {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--sage);
-  border-radius: 200px 200px 0 0;
-  z-index: -1;
-  transform: none;
-  transition: all 1s ease;
+  left: 50%;
+  width: 96%;
+  height: 92%;
+  transform: translateX(-50%);
+  border-radius: 52% 48% 22% 78% / 48% 46% 54% 52%;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.42), transparent 28%),
+    linear-gradient(135deg, rgba(76, 175, 80, 0.92), rgba(255, 201, 60, 0.78) 52%, rgba(255, 138, 0, 0.7));
+  z-index: -2;
+  overflow: hidden;
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.7s ease;
 }
 
-.hero-photo-wrap:hover .blob-bg {
-  border-radius: 200px 200px 0 0;
+.blob-bg::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 68% 24%, rgba(255, 255, 255, 0.35), transparent 30%),
+    radial-gradient(circle at 20% 78%, rgba(250, 250, 247, 0.28), transparent 32%);
+  opacity: 0.9;
 }
 
 .hero-photo-wrap img {
-  width: 90%;
-  height: 85%;
+  width: 88%;
+  height: 88%;
   object-fit: cover;
   object-position: center bottom;
-  border-radius: 200px 200px 0 0;
-  -webkit-mask-image: none;
-  mask-image: none;
+  border-radius: 46% 54% 20% 80% / 42% 42% 58% 58%;
   position: relative;
   z-index: 10;
-  transition: transform 0.5s ease;
+  transform: translateY(8px);
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.7s ease,
+    border-radius 0.7s ease;
+  filter:
+    saturate(1.03)
+    contrast(1.03)
+    drop-shadow(0 18px 24px rgba(26, 26, 26, 0.16));
+}
+
+.hero-photo-wrap:hover .blob-bg {
+  transform: translateX(-50%) scale(1.025) rotate(1deg);
+  border-radius: 44% 56% 32% 68% / 56% 40% 60% 44%;
+  filter: saturate(1.08);
 }
 
 .hero-photo-wrap:hover img {
-  transform: scale(1.05);
+  transform: translateY(0) scale(1.035);
+  border-radius: 50% 50% 24% 76% / 46% 46% 54% 54%;
+}
+
+@keyframes blobBreath {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-2deg) scale(1);
+    border-radius: 46% 54% 28% 72% / 54% 48% 52% 46%;
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(2deg) scale(1.025);
+    border-radius: 54% 46% 34% 66% / 46% 56% 44% 54%;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-photo-wrap {
+    max-width: 290px;
+    margin-inline: auto;
+    margin-top: 1rem;
+    filter: drop-shadow(0 18px 28px rgba(26, 26, 26, 0.1));
+  }
+
+  .hero-photo-wrap::before {
+    width: 108%;
+    height: 86%;
+  }
+
+  .hero-photo-wrap::after {
+    width: 70%;
+    height: 58%;
+    right: -8%;
+    bottom: 16%;
+    filter: blur(14px);
+  }
+
+  .hero-photo-wrap img {
+    width: 87%;
+    height: 87%;
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-wrap::before {
+    animation: none !important;
+  }
+
+  .hero-photo-wrap:hover .blob-bg,
+  .hero-photo-wrap:hover img {
+    transform: none;
+  }
 }
 
 .floral-svg {
