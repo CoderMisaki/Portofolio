@@ -71,13 +71,15 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   background: linear-gradient(145deg, #ffe08a, #ffd067);
   border-radius: 200px 200px 24px 24px;
   z-index: -1;
-  transform: translate(-12px, 12px) rotate(-3deg);
+  /* rotate(-3deg) dihapus, cukup sisakan translate untuk efek bayangan kuning */
+  transform: translate(-12px, 12px);
   transition: all 1s ease;
 }
 
 .hero-photo-wrap:hover .blob-bg {
   border-radius: 180px 180px 32px 32px;
-  transform: translate(-6px, 6px) rotate(0deg);
+  /* rotasinya juga dihapus di hover agar animasinya tetap mulus */
+  transform: translate(-6px, 6px);
 }
 
 .hero-photo-wrap img {
