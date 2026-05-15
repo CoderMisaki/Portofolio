@@ -1,0 +1,60 @@
+:root {
+  --milk: #fafaf7;
+  --sage: #4caf50;
+  --yellow: #ffc93c;
+  --orange: #ff8a00;
+  --ink: #1a1a1a;
+  --card: #fffdf8;
+  --shadow: 0 12px 35px rgba(26, 26, 26, 0.08);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, #fff8e6, var(--milk) 45%);
+  line-height: 1.7;
+}
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.site-header { position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(250,250,247,.75); z-index: 10; border-bottom: 1px solid rgba(26,26,26,.06); }
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.brand { font-family: Sora, sans-serif; font-weight: 700; text-decoration: none; color: var(--ink); }
+nav a { margin-left: 1rem; color: var(--ink); text-decoration: none; font-weight: 600; }
+.section { padding: 5rem 0; }
+h1,h2,h3 { font-family: Sora, sans-serif; line-height: 1.2; margin-top: 0; }
+h1 { font-size: clamp(2rem, 4vw, 3.8rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; }
+.badge { display:inline-block; background:#fff1bf; border-radius:999px; padding:.4rem .85rem; font-weight:700; }
+.hero-photo { margin: 0; background: linear-gradient(135deg, #fff6d8, #e9ffe9); border-radius: 28px; padding: 1rem; box-shadow: var(--shadow); }
+.hero-photo img { width: 100%; border-radius: 20px; display: block; }
+.btn { border-radius: 999px; padding: .8rem 1.2rem; text-decoration: none; font-weight:700; display:inline-block; transition: transform .25s ease, box-shadow .25s ease; }
+.btn:hover { transform: translateY(-3px) scale(1.01); }
+.btn-primary { background: var(--sage); color: white; box-shadow: 0 10px 18px rgba(76,175,80,.35); }
+.btn-secondary { background: white; color: var(--ink); border: 1px solid rgba(26,26,26,.15); }
+.hero-actions { display: flex; gap: .8rem; margin-top: 1.4rem; flex-wrap: wrap; }
+.split-card { display:grid; grid-template-columns: 1.25fr .75fr; gap: 1.5rem; }
+.sticky-note, .contact-card, .project-card { background: var(--card); border: 1px solid rgba(26,26,26,.08); border-radius: 24px; padding: 1.4rem; box-shadow: var(--shadow); }
+.sticky-note { background: #fff8d8; transform: rotate(-1.2deg); }
+.project-grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem; margin-top: 1.2rem; }
+.project-card { transition: transform .3s ease, box-shadow .3s ease; }
+.project-card:hover { transform: translateY(-5px) rotate(-.3deg); box-shadow: 0 16px 35px rgba(26,26,26,.12); }
+.project-card .tag { display:inline-block; background: #ffe5cc; border-radius:999px; padding:.3rem .7rem; font-size:.82rem; font-weight:700; }
+.project-card a { color: var(--sage); font-weight:700; }
+.contact-card { text-align: center; background: linear-gradient(145deg, #fffef2, #f5fff5); }
+.garden-leaf { position: fixed; border-radius: 60% 40% 65% 35%; opacity: .25; pointer-events: none; }
+.leaf-a { width: 120px; height: 80px; right: 5%; top: 22%; background: var(--sage); animation: float 7s ease-in-out infinite; }
+.leaf-b { width: 90px; height: 70px; left: 3%; top: 62%; background: var(--yellow); animation: float 9s ease-in-out infinite; }
+.cursor-glow { position: fixed; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(255,201,60,.2), rgba(255,201,60,0)); transform: translate(-50%, -50%); pointer-events: none; z-index: -1; }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.show { opacity: 1; transform: none; }
+@keyframes float { 50% { transform: translateY(-10px) rotate(5deg);} }
+@media (max-width: 850px) {
+  .hero-grid, .split-card, .project-grid { grid-template-columns: 1fr; }
+  .garden-leaf { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
