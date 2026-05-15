@@ -67,25 +67,25 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .hero-photo-wrap::before {
   content: "";
   position: absolute;
-  width: 115%;
-  height: 88%;
+  width: 114%;
+  height: 87%;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%) rotate(-2deg);
-  border-radius: 46% 54% 28% 72% / 54% 48% 52% 46%;
+  transform: translateX(-50%) rotate(-4deg);
+  border-radius: 39% 61% 27% 73% / 56% 42% 58% 44%;
   background:
-    radial-gradient(circle at 22% 20%, rgba(255, 201, 60, 0.95) 0 13%, transparent 34%),
-    radial-gradient(circle at 82% 28%, rgba(255, 138, 0, 0.7) 0 12%, transparent 34%),
-    radial-gradient(circle at 70% 82%, rgba(76, 175, 80, 0.75) 0 18%, transparent 38%),
+    radial-gradient(ellipse at 26% 18%, rgba(235, 190, 92, 0.24) 0 12%, transparent 36%),
+    radial-gradient(ellipse at 78% 34%, rgba(233, 157, 78, 0.2) 0 10%, transparent 33%),
+    radial-gradient(ellipse at 66% 78%, rgba(111, 162, 109, 0.34) 0 17%, transparent 42%),
     conic-gradient(
-      from 145deg,
-      #4caf50,
-      #ffc93c,
-      #ff8a00,
-      #f7e7b8,
-      #4caf50
+      from 168deg,
+      #5a8f66 0deg,
+      #7ea77d 115deg,
+      #d8c08f 198deg,
+      #f0e1c2 254deg,
+      #5a8f66 360deg
     );
-  opacity: 0.95;
+  opacity: 0.9;
   z-index: -3;
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.35),
@@ -96,13 +96,13 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .hero-photo-wrap::after {
   content: "";
   position: absolute;
-  width: 82%;
-  height: 72%;
-  right: -18%;
-  bottom: 12%;
-  border-radius: 999px;
-  background: rgba(255, 201, 60, 0.28);
-  filter: blur(18px);
+  width: 74%;
+  height: 62%;
+  right: -12%;
+  bottom: 15%;
+  border-radius: 58% 42% 64% 36% / 48% 57% 43% 52%;
+  background: rgba(235, 190, 92, 0.18);
+  filter: blur(20px);
   z-index: -4;
   transform: rotate(-12deg);
 }
@@ -111,14 +111,14 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 96%;
-  height: 92%;
+  width: 95%;
+  height: 91%;
   transform: translateX(-50%);
-  border-radius: 52% 48% 22% 78% / 48% 46% 54% 52%;
+  border-radius: 43% 57% 24% 76% / 53% 40% 60% 47%;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0)),
-    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.42), transparent 28%),
-    linear-gradient(135deg, rgba(76, 175, 80, 0.92), rgba(255, 201, 60, 0.78) 52%, rgba(255, 138, 0, 0.7));
+    linear-gradient(148deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)),
+    radial-gradient(ellipse at 34% 20%, rgba(255, 255, 255, 0.34), transparent 30%),
+    linear-gradient(138deg, rgba(89, 146, 97, 0.9), rgba(129, 169, 125, 0.82) 56%, rgba(225, 202, 155, 0.56));
   z-index: -2;
   overflow: hidden;
   transition:
@@ -130,37 +130,37 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .blob-bg::before {
   content: "";
   position: absolute;
-  inset: 8%;
+  inset: 7.5%;
   border-radius: inherit;
   background:
-    radial-gradient(circle at 68% 24%, rgba(255, 255, 255, 0.35), transparent 30%),
-    radial-gradient(circle at 20% 78%, rgba(250, 250, 247, 0.28), transparent 32%);
-  opacity: 0.9;
+    radial-gradient(ellipse at 66% 24%, rgba(255, 255, 255, 0.3), transparent 32%),
+    radial-gradient(ellipse at 24% 76%, rgba(250, 250, 247, 0.24), transparent 36%);
+  opacity: 0.82;
 }
 
 .hero-photo-wrap img {
-  width: 88%;
-  height: 88%;
+  width: 89%;
+  height: 89%;
   object-fit: cover;
-  object-position: center bottom;
-  border-radius: 46% 54% 20% 80% / 42% 42% 58% 58%;
+  object-position: center 82%;
+  border-radius: 43% 57% 23% 77% / 41% 43% 57% 59%;
   position: relative;
   z-index: 10;
-  transform: translateY(8px);
+  transform: translateY(-2px);
   transition:
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.7s ease,
     border-radius 0.7s ease;
   filter:
-    saturate(1.03)
-    contrast(1.03)
+    saturate(1.01)
+    contrast(1.02)
     drop-shadow(0 18px 24px rgba(26, 26, 26, 0.16));
 }
 
 .hero-photo-wrap:hover .blob-bg {
   transform: translateX(-50%) scale(1.025) rotate(1deg);
-  border-radius: 44% 56% 32% 68% / 56% 40% 60% 44%;
-  filter: saturate(1.08);
+  border-radius: 39% 61% 30% 70% / 58% 41% 59% 42%;
+  filter: saturate(1.04);
 }
 
 .hero-photo-wrap:hover img {
@@ -171,41 +171,41 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 @keyframes blobBreath {
   0%,
   100% {
-    transform: translateX(-50%) rotate(-2deg) scale(1);
-    border-radius: 46% 54% 28% 72% / 54% 48% 52% 46%;
+    transform: translateX(-50%) rotate(-4deg) scale(1);
+    border-radius: 39% 61% 27% 73% / 56% 42% 58% 44%;
   }
 
   50% {
-    transform: translateX(-50%) rotate(2deg) scale(1.025);
-    border-radius: 54% 46% 34% 66% / 46% 56% 44% 54%;
+    transform: translateX(-50%) rotate(1deg) scale(1.02);
+    border-radius: 49% 51% 33% 67% / 47% 57% 43% 53%;
   }
 }
 
 @media (max-width: 850px) {
   .hero-photo-wrap {
-    max-width: 290px;
+    max-width: 276px;
     margin-inline: auto;
     margin-top: 1rem;
     filter: drop-shadow(0 18px 28px rgba(26, 26, 26, 0.1));
   }
 
   .hero-photo-wrap::before {
-    width: 108%;
-    height: 86%;
+    width: 106%;
+    height: 84%;
   }
 
   .hero-photo-wrap::after {
-    width: 70%;
-    height: 58%;
-    right: -8%;
+    width: 62%;
+    height: 52%;
+    right: -4%;
     bottom: 16%;
-    filter: blur(14px);
+    filter: blur(13px);
   }
 
   .hero-photo-wrap img {
-    width: 87%;
-    height: 87%;
-    transform: translateY(6px);
+    width: 88%;
+    height: 88%;
+    transform: translateY(-1px);
   }
 }
 
