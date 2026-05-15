@@ -2,14 +2,14 @@ export const projects = [
   {
     name: 'Terminal Trade',
     description:
-      'Platform trading bergaya terminal yang saya fokuskan pada kecepatan akses data, struktur UI yang tegas, dan alur keputusan yang efisien untuk user aktif.',
+      'Trading terminal berbasis web dengan visualisasi data real-time dan integrasi API untuk monitoring market secara cepat dan responsif.',
     link: 'https://masako.eu.cc/',
     type: 'Web Project 1'
   },
   {
-    name: 'Ai Chat bot',
+    name: 'AI Chatbot',
     description:
-      'Asisten percakapan berbasis AI dengan antarmuka ringan untuk eksplorasi ide, support workflow harian, dan interaksi yang cepat lintas perangkat.',
+      'AI chatbot berbasis NLP dengan sistem percakapan interaktif, dukungan workflow harian, dan struktur interface yang responsif.',
     link: 'https://ai-siggy.vercel.app/',
     type: 'Web Project 2'
   }

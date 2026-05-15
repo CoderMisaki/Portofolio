@@ -2,6 +2,8 @@ import { projects } from '../data/projects.js';
 
 const projectList = document.getElementById('project-list');
 const cursorGlow = document.querySelector('.cursor-glow');
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.getElementById('main-nav');
 
 projectList.innerHTML = projects
   .map(
@@ -35,6 +37,20 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.reveal').forEach((section) => observer.observe(section));
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 
 if (window.matchMedia('(pointer: fine)').matches) {
   let rafId = null;
