@@ -33,8 +33,8 @@ const linkedInLink = document.getElementById('linkedin-link');
 projectList.innerHTML = projects
   .map(
     (project) => `
-      <article class="project-card">
-        <div class="project-preview-wrap">
+      <article class="project-card works-card">
+        <div class="project-preview-wrap works-preview">
           <iframe
             class="project-preview"
             src="${escapeHTML(sanitizeURL(project.link))}"
@@ -43,10 +43,14 @@ projectList.innerHTML = projects
             referrerpolicy="no-referrer"
           ></iframe>
         </div>
-        <span class="tag">${escapeHTML(project.type)}</span>
-        <h3>${escapeHTML(project.name)}</h3>
-        <p>${escapeHTML(project.description)}</p>
-        <a href="${escapeHTML(sanitizeURL(project.link))}" target="_blank" rel="noreferrer noopener">Buka Full Project ↗</a>
+        <div class="works-content">
+          <h3>${escapeHTML(project.name)}</h3>
+          <span class="tag works-tag">${escapeHTML(project.type)}</span>
+          <p>${escapeHTML(project.description)}</p>
+          <a class="works-link" href="${escapeHTML(sanitizeURL(project.link))}" target="_blank" rel="noreferrer noopener" aria-label="View ${escapeHTML(project.name)}">
+            <span class="icon-arrow">→</span>
+          </a>
+        </div>
       </article>
     `
   )

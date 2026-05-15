@@ -23,17 +23,31 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#hero">Muhammad Fadilah</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka navigasi">
-          ☰
-        </button>
+        <div class="brand-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 22H6L12 10L18 22H22L12 2Z" fill="var(--orange)" />
+          </svg>
+          <a class="brand" href="#hero">Muhammad Fadillah</a>
+        </div>
+
         <nav id="main-nav" aria-label="Navigasi utama">
-          <a href="#about">Profil</a>
-          <a href="#projects">Proyek</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Pengalaman</a>
-          <a href="#contact">Kontak</a>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Works</a>
+          <a href="#services">Services</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
         </nav>
+
+        <div class="header-actions">
+          <a href="#contact" class="btn-talk">
+            Let's Talk
+            <span class="icon-arrow">↗</span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka navigasi">
+            ☰
+          </button>
+        </div>
       </div>
     </header>
 
@@ -41,91 +55,346 @@
       <section id="hero" class="hero section reveal">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="badge">Web Developer • AI Automation • API Integration</p>
-            <h1>Membangun website dan dashboard modern dengan fokus performa, automation, dan pengalaman pengguna.</h1>
-            <p>
-              Saya fokus membuat interface yang membantu pekerjaan berjalan lebih cepat,
-              lebih jelas, dan lebih efisien. Portfolio ini menampilkan 2 project utama
-              berbasis HTML, CSS, dan JavaScript yang dioptimalkan untuk desktop dan mobile.
+            <div class="hero-greeting">
+              <span class="greeting-text">Hello! I'm Muhammad Fadillah</span>
+              <span class="greeting-wave">👋</span>
+            </div>
+
+            <h1>
+              I design<br>
+              digital <span class="highlight-green">experiences<svg class="squiggle" width="160" height="20" viewBox="0 0 160 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 18C30 18 45 8 80 8C115 8 130 18 158 18" stroke="var(--yellow)" stroke-width="4" stroke-linecap="round"/></svg></span><br>
+              that <span class="highlight-orange">inspire</span> people.
+            </h1>
+
+            <p class="hero-desc">
+              A creative UI/UX designer & front-end developer crafting user-friendly websites and digital products with a focus on clarity, purpose, and impact.
             </p>
+
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">Lihat Proyek</a>
-              <a class="btn btn-secondary" href="#contact">Hubungi Saya</a>
+              <a class="btn btn-primary btn-works" href="#projects">
+                View My Works
+                <span class="icon-arrow">↗</span>
+              </a>
+              <a class="btn btn-secondary btn-cv" href="https://drive.google.com/uc?export=download&id=1MNTDYtm-GGRpvyOx5NZyAf50BTJeGDfv" rel="noreferrer noopener">
+                Download CV
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 15V3M12 15L8 11M12 15L16 11M4 21H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
             </div>
           </div>
-          <figure class="hero-photo">
-            <img src="https://res.cloudinary.com/dbcxdtrx6/image/upload/q_auto/f_auto/v1778772809/x8k2va_pm5t5o.png" alt="Foto profil Muhammad Fadilah" loading="lazy" />
-          </figure>
+
+          <div class="hero-visual">
+            <div class="hero-photo-wrap">
+              <div class="blob-bg"></div>
+              <img src="https://res.cloudinary.com/dbcxdtrx6/image/upload/q_auto/f_auto/v1778772809/x8k2va_pm5t5o.png" alt="Muhammad Fadillah" loading="lazy" />
+
+              <div class="freelance-badge">
+                <span class="dot"></span>
+                Available for<br>Freelance
+              </div>
+            </div>
+
+            <div class="stats-bar">
+              <div class="stat-item">
+                <div class="stat-icon icon-star">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#ffc93c"/>
+                  </svg>
+                </div>
+                <div class="stat-text">
+                  <span class="stat-number">1+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+              </div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <div class="stat-icon icon-folder">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6H12L10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6Z" stroke="#4caf50" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="stat-text">
+                  <span class="stat-number">3+</span>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+              </div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <div class="stat-icon icon-heart">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="#ff8a00" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <div class="stat-text">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Client Satisfaction</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Doodle Elements -->
+            <svg class="doodle doodle-wave" width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 20C12 5 22 35 32 20C42 5 52 35 58 20" stroke="#4caf50" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="doodle doodle-dots-orange">
+              <span></span><span></span><span></span>
+            </div>
+            <svg class="doodle doodle-leaf" width="40" height="50" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 48C20 48 2 30 2 15C2 5 15 2 20 2C25 2 38 5 38 15C38 30 20 48 20 48Z" stroke="#4caf50" stroke-width="2" fill="none"/>
+              <path d="M20 2V48" stroke="#4caf50" stroke-width="2"/>
+            </svg>
+          </div>
         </div>
       </section>
 
       <section id="about" class="section reveal">
-        <div class="container split-card">
-          <div>
-            <h2>Profil Singkat</h2>
+        <div class="container about-skills-split">
+
+          <div class="about-me-column">
+            <h2>About me</h2>
             <p>
-              Saya memiliki pengalaman dalam pengembangan web, integrasi API, dan pengelolaan
-              sistem berbasis digital. Terbiasa menerjemahkan kebutuhan kerja menjadi interface
-              yang jelas, responsif, dan profesional untuk penggunaan nyata.
+              I'm <strong>Muhammad Fadillah</strong>, a Web Developer & AI Automation Enthusiast based in Indonesia. I love turning complex problems into simple, beautiful, and efficient solutions.
             </p>
+
+            <ul class="about-features">
+              <li>
+                <div class="feature-icon bg-green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" fill="white"/>
+                  </svg>
+                </div>
+                <span>I care about details, performance, and automation.</span>
+              </li>
+              <li>
+                <div class="feature-icon bg-yellow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.13 2 5 5.13 5 9C5 11.38 6.19 13.47 8 14.74V17C8 17.55 8.45 18 9 18H15C15.55 18 16 17.55 16 17V14.74C17.81 13.47 19 11.38 19 9C19 5.13 15.87 2 12 2ZM14 13.11V16H10V13.11C8.75 12.23 8 10.7 8 9C8 6.79 9.79 5 12 5C14.21 5 16 6.79 16 9C16 10.7 15.25 12.23 14 13.11ZM12 22C12.83 22 13.5 21.33 13.5 20.5H10.5C10.5 21.33 11.17 22 12 22ZM15 19H9V20H15V19Z" fill="white"/>
+                  </svg>
+                </div>
+                <span>I enjoy solving problems and learning new things.</span>
+              </li>
+              <li>
+                <div class="feature-icon bg-orange">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.4 16.6L4.8 12L9.4 7.4L8 6L2 12L8 18L9.4 16.6ZM14.6 16.6L19.2 12L14.6 7.4L16 6L22 12L16 18L14.6 16.6Z" fill="white"/>
+                  </svg>
+                </div>
+                <span>I build with clean code and scalable design.</span>
+              </li>
+            </ul>
+
+            <a class="btn btn-primary btn-more-about" href="#contact">
+              More About Me
+              <span class="icon-arrow">↗</span>
+            </a>
           </div>
-          <aside class="sticky-note">
-            <h3>Fokus Saat Ini</h3>
-            <p>Sedang membangun automation workflow, dashboard kerja, dan tool berbasis AI untuk mempercepat proses harian.</p>
-          </aside>
+
+          <div class="skills-column">
+            <h2>My skills</h2>
+
+            <div class="skills-list">
+              <!-- Skill 1 -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-icon-wrap bg-green-light">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V6H20V18ZM12 12L15 15H17L14 12L17 9H15L12 12ZM7 15H11V13H7V15Z" fill="var(--sage)"/>
+                    </svg>
+                  </div>
+                  <span class="skill-name">Web Development</span>
+                  <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill fill-green" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <!-- Skill 2 -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-icon-wrap bg-orange-light">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.29 20.71C19.68 21.1 20.32 21.1 20.71 20.71C21.1 20.32 21.1 19.68 20.71 19.29L19.29 20.71ZM3.29 4.71C2.9 4.32 2.9 3.68 3.29 3.29C3.68 2.9 4.32 2.9 4.71 3.29L3.29 4.71ZM19.29 19.29L3.29 3.29L4.71 4.71L20.71 20.71L19.29 19.29Z" fill="var(--orange)"/>
+                      <path d="M5 21C3.9 21 3 20.1 3 19C3 17.9 3.9 17 5 17C6.1 17 7 17.9 7 19C7 20.1 6.1 21 5 21ZM19 7C20.1 7 21 6.1 21 5C21 3.9 20.1 3 19 3C17.9 3 17 3.9 17 5C17 6.1 17.9 7 19 7ZM10.5 12C10.5 11.17 11.17 10.5 12 10.5C12.83 10.5 13.5 11.17 13.5 12C13.5 12.83 12.83 13.5 12 13.5C11.17 13.5 10.5 12.83 10.5 12Z" fill="var(--orange)"/>
+                    </svg>
+                  </div>
+                  <span class="skill-name">API Integration</span>
+                  <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill fill-orange" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <!-- Skill 3 -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-icon-wrap bg-yellow-light">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 2H3C1.9 2 1 2.9 1 4V20C1 21.1 1.9 22 3 22H21C22.1 22 23 21.1 23 20V4C23 2.9 22.1 2 21 2ZM21 20H3V4H21V20Z" fill="var(--yellow)"/>
+                      <path d="M12 17L17 12L12 7V10H7V14H12V17Z" fill="var(--yellow)"/>
+                    </svg>
+                  </div>
+                  <span class="skill-name">AI Automation</span>
+                  <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill fill-yellow" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <!-- Skill 4 -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <div class="skill-icon-wrap bg-green-light">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11 15H13V17H11V15ZM11 7H13V13H11V7ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="var(--sage)"/>
+                    </svg>
+                  </div>
+                  <span class="skill-name">Problem Solving</span>
+                  <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill fill-green" style="width: 80%;"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 
       <section id="projects" class="section reveal">
         <div class="container">
-          <h2>Featured Projects</h2>
+          <div class="section-header">
+            <div>
+              <p class="section-subtitle">My Works</p>
+              <h2>Featured Projects</h2>
+            </div>
+            <a href="#projects" class="btn-view-all">View All Projects <span class="icon-arrow">→</span></a>
+          </div>
           <div id="project-list" class="project-grid"></div>
         </div>
       </section>
 
-      <section id="skills" class="section reveal">
-        <div class="container split-card">
-          <div>
-            <h2>Technical Skills</h2>
-            <p>HTML, CSS, JavaScript, API Integration, Responsive Web Design, Debugging & Troubleshooting.</p>
-          </div>
-          <aside class="sticky-note">
-            <h3>Soft Skills</h3>
-            <p>Problem Solving, Team Collaboration, Fast Adaptation, dan Time Management.</p>
-          </aside>
-        </div>
-      </section>
-
-      <section id="experience" class="section reveal">
-        <div class="container">
-          <h2>Experience</h2>
-          <div class="project-grid">
-            <article class="project-card">
-              <span class="tag">2025–Sekarang</span>
-              <h3>Tutor Privat</h3>
-              <p>Membimbing siswa dengan pendekatan terstruktur dan menyesuaikan metode belajar sesuai kebutuhan siswa.</p>
-            </article>
-            <article class="project-card">
-              <span class="tag">Operasional</span>
-              <h3>J&amp;T Express — Sorter</h3>
-              <p>Menangani proses sortir paket dan menjaga efisiensi distribusi harian dalam ritme kerja yang cepat.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" class="section reveal">
-        <div class="container contact-card">
-          <h2>Hubungi Saya</h2>
-          <p>
-            Terbuka untuk kolaborasi freelance, pengembangan dashboard, automation workflow,
-            dan diskusi implementasi web untuk kebutuhan bisnis.
-          </p>
-          <div class="contact-actions" aria-label="Aksi kontak dan CV">
-            <a id="email-link" class="btn btn-primary" href="#" rel="nofollow">Email</a>
-            <a id="linkedin-link" class="btn btn-secondary" href="#" target="_blank" rel="noreferrer noopener nofollow">LinkedIn</a>
-            <a class="btn btn-secondary" href="https://drive.google.com/file/d/1MNTDYtm-GGRpvyOx5NZyAf50BTJeGDfv/preview" target="_blank" rel="noreferrer noopener">Preview CV</a>
-            <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1MNTDYtm-GGRpvyOx5NZyAf50BTJeGDfv" rel="noreferrer noopener">Download CV</a>
+        <div class="container">
+          <div class="bottom-cta-wrap">
+
+            <div class="cta-left">
+              <h2>
+                Let's create something<br>
+                <span class="highlight-green underline-green">amazing</span> together!
+              </h2>
+              <p>
+                I'm currently available for freelance work.<br>
+                Let's talk about your project!
+              </p>
+              <a class="btn btn-primary btn-get-in-touch" href="#email-link">
+                Get In Touch
+                <span class="icon-arrow">↗</span>
+              </a>
+
+              <!-- Paper Plane Doodle -->
+              <svg class="doodle doodle-plane" width="60" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="cta-right">
+              <div class="contact-info-list">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke="#ffc93c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <rect x="3" y="5" width="18" height="14" rx="2" stroke="#ffc93c" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="contact-text">
+                    <span class="contact-label">Email</span>
+                    <a id="email-link" href="#" class="contact-value">echo@mfadillah.eu.cc</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffc93c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.4183 8 18 12 22Z" stroke="#ffc93c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="contact-text">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">Jakarta, Indonesia</span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15 9H9V15H15V9Z" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="contact-text">
+                    <span class="contact-label">Socials</span>
+                    <div class="social-links">
+                      <a id="linkedin-link" href="#" target="_blank" rel="noreferrer noopener nofollow" class="social-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" fill="var(--sage)"/>
+                          <path d="M6 9H2V21H6V9Z" fill="var(--sage)"/>
+                          <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" fill="var(--sage)"/>
+                        </svg>
+                      </a>
+                      <a href="#" target="_blank" rel="noreferrer noopener nofollow" class="social-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" fill="var(--orange)"/>
+                          <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" fill="white"/>
+                          <path d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z" fill="var(--orange)"/>
+                        </svg>
+                      </a>
+                      <a href="#" target="_blank" rel="noreferrer noopener nofollow" class="social-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.0375 17.6531 15.9731 17.1736 15.811 16.7239C15.6489 16.2742 15.3929 15.8647 15.06 15.53C18.2 15.17 21.5 13.97 21.5 8.52C21.4997 7.12383 20.9627 5.7812 20 4.77C20.4559 3.54851 20.4236 2.19835 19.91 1C19.91 1 18.73 0.65 16 2.48C13.708 1.85882 11.292 1.85882 9 2.48C6.27 0.65 5.09 1 5.09 1C4.57638 2.19835 4.54413 3.54851 5 4.77C4.03012 5.7887 3.49251 7.14345 3.5 8.55C3.5 13.97 6.8 15.16 9.94 15.55C9.611 15.89 9.35725 16.3034 9.19777 16.759C9.03829 17.2145 8.97746 17.7001 9.02001 18.18V22" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Plant Vector Illustration -->
+            <div class="plant-illustration">
+              <svg width="120" height="150" viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Pot -->
+                <path d="M30 110 L40 145 C42 148 46 150 50 150 L70 150 C74 150 78 148 80 145 L90 110 Z" fill="var(--yellow)" />
+                <path d="M25 100 L95 100 C98 100 100 102 100 105 L95 110 L25 110 L20 105 C20 102 22 100 25 100 Z" fill="var(--yellow)" />
+                <!-- Leaves -->
+                <path d="M60 100 C60 100 20 80 10 40 C10 40 40 30 60 100 Z" fill="var(--sage)" />
+                <path d="M60 100 C60 100 40 60 30 20 C30 20 70 10 60 100 Z" fill="var(--sage)" opacity="0.8"/>
+                <path d="M60 100 C60 100 90 70 100 30 C100 30 60 20 60 100 Z" fill="var(--sage)" />
+                <path d="M60 100 C60 100 110 90 115 50 C115 50 80 40 60 100 Z" fill="var(--sage)" opacity="0.9"/>
+                <!-- Pot details -->
+                <line x1="32" y1="120" x2="88" y2="120" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+                <line x1="36" y1="130" x2="84" y2="130" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+                <line x1="40" y1="140" x2="80" y2="140" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+              </svg>
+            </div>
+
+            <svg class="doodle doodle-envelope" width="40" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+               <rect x="3" y="5" width="18" height="14" rx="2" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="doodle doodle-dots-yellow">
+              <span></span><span></span><span></span>
+            </div>
           </div>
         </div>
       </section>
