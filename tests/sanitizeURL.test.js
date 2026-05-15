@@ -55,11 +55,11 @@ import('../js/main.js').then(({ sanitizeURL }) => {
   runTest("Leading newline before javascript:", "\njavascript:alert(1)", "about:blank");
 
   // Other potential protocols and edge cases
-  runTest("Data URI (base64 image)", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==");
+  runTest("Data URI (base64 image)", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==", "about:blank");
 
   // URL encoded and null byte injection edge cases
-  runTest("URL Encoded javascript:", "javascript%3Aalert(1)", "javascript%3Aalert(1)"); // Current behaviour handles only explicit trailing colon
-  runTest("Null byte injection", "java\x00script:alert(1)", "java\x00script:alert(1)"); // Current behaviour allows null byte injection
+  runTest("URL Encoded javascript:", "javascript%3Aalert(1)", "about:blank");
+  runTest("Null byte injection", "java\x00script:alert(1)", "about:blank");
 
   console.log(`\nResults: ${passed} passed, ${failed} failed.`);
   if (failed > 0) {
