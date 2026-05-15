@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Kreatif | Digital Creator Desk</title>
+    <meta
+      name="description"
+      content="Portfolio modern dengan nuansa creative garden, menampilkan karya Terminal Trade dan AI Chat bot."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="garden-leaf leaf-a" aria-hidden="true"></div>
+    <div class="garden-leaf leaf-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#hero">Creative Portfolio</a>
+        <nav aria-label="Navigasi utama">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero section reveal">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="badge">Digital Creator • Problem Solver</p>
+            <h1>Membangun produk web yang terasa hidup, berguna, dan memorable.</h1>
+            <p>
+              Saya menggabungkan mindset engineering dengan storytelling visual untuk
+              menciptakan pengalaman digital yang clean, interaktif, dan tetap fokus
+              ke hasil bisnis.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">Lihat Proyek</a>
+              <a class="btn btn-secondary" href="#contact">Kolaborasi</a>
+            </div>
+          </div>
+          <figure class="hero-photo">
+            <img src="https://res.cloudinary.com/dbcxdtrx6/image/upload/q_auto/f_auto/v1778772809/x8k2va_pm5t5o.png" alt="Foto profil pemilik portfolio" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="container split-card">
+          <div>
+            <h2>About Me</h2>
+            <p>
+              Saya suka mengubah ide kompleks menjadi antarmuka yang intuitif.
+              Fokus saya adalah performa, UX yang jelas, dan detail interaksi kecil
+              yang membuat produk terasa premium.
+            </p>
+          </div>
+          <aside class="sticky-note">
+            <h3>Currently Building</h3>
+            <p>Eksperimen automation workflow, integrasi AI assistant, dan dashboard trading yang adaptif.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div id="project-list" class="project-grid"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="container contact-card">
+          <h2>Mari bangun sesuatu yang impactful.</h2>
+          <p>
+            Terbuka untuk freelance, kolaborasi produk, atau diskusi tentang web,
+            AI tools, dan digital experience.
+          </p>
+          <a class="btn btn-primary" href="mailto:hello@portfolio.dev">Kirim Email</a>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
