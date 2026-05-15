@@ -83,8 +83,10 @@ if (window.matchMedia('(pointer: fine)').matches) {
   let pointerY = 0;
 
   const updateGlow = () => {
-    cursorGlow.style.left = `${pointerX}px`;
-    cursorGlow.style.top = `${pointerY}px`;
+    // ⚡ Bolt Performance Optimization:
+    // Using transform: translate3d instead of top/left to use GPU acceleration
+    // and avoid layout thrashing on every frame
+    cursorGlow.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
     rafId = null;
   };
 
