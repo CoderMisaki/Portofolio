@@ -2,18 +2,18 @@ import { projects } from '../data/projects.js';
 
 const projectList = document.getElementById('project-list');
 
+const htmlEntities = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  "'": '&#39;',
+  '"': '&quot;'
+};
+
 // Sentinel: HTML escaping function to prevent XSS
 const escapeHTML = (str) => {
   if (str == null) return '';
-  return String(str).replace(/[&<>'"]/g,
-    tag => ({
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      "'": '&#39;',
-      '"': '&quot;'
-    }[tag])
-  );
+  return String(str).replace(/[&<>'"]/g, tag => htmlEntities[tag]);
 };
 
 // Validate URL protocol to prevent javascript: XSS
