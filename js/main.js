@@ -118,3 +118,5 @@ if (linkedInLink) {
 if (githubLink) {
   githubLink.setAttribute('href', 'https://github.com/CoderMisaki/');
 }
+
+export { sanitizeURL };
