@@ -114,7 +114,6 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .doodle-dots-orange { display: flex; gap: 8px; flex-wrap: wrap; width: 40px; top: 20%; left: -5%; }
 .doodle-dots-orange span { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; display: inline-block; }
 .doodle-leaf { bottom: 10%; right: -10%; transform: rotate(15deg); }
-.split-card { display:grid; grid-template-columns: 1.25fr .75fr; gap: 1.5rem; }
 .about-skills-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 .about-me-column h2, .skills-column h2 { color: var(--sage); font-family: Sora, sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
 .about-me-column p { font-size: 1.05rem; color: #4a4a4a; margin-bottom: 2rem; }
@@ -217,7 +216,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   .cta-left { max-width: 100%; text-align: center; align-items: center; }
   .cta-left h2 { font-size: 1.8rem; }
   .plant-illustration { right: -20px; bottom: -20px; opacity: 0.4; z-index: 0; }
-  .hero-grid, .split-card, .about-skills-split { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-grid, .about-skills-split { grid-template-columns: 1fr; gap: 2rem; }
   .project-grid { grid-template-columns: 1fr; gap: 2rem; }
   .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .garden-leaf { display: none; }
