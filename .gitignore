@@ -1,12 +1,17 @@
-node_modules
-.next
-dist
-build
-coverage
+node_modules/
+dist/
+build/
+.next/
+coverage/
 .env
-logs
-cache
-temporary files
-IDE files
+.env.*
+logs/
+*.log
+cache/
+*.tmp
+*.temp
+.vscode/
+.idea/
+.DS_Store
 .Jules
 .jules
