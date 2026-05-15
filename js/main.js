@@ -42,6 +42,7 @@ projectList.innerHTML = projects
             title="Preview ${escapeHTML(project.name)}"
             loading="lazy"
             referrerpolicy="no-referrer"
+            sandbox="allow-scripts allow-same-origin"
           ></iframe>
         </div>
         <div class="works-content">
