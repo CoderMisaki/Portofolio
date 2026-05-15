@@ -1,6 +1,29 @@
 import { projects } from '../data/projects.js';
 
 const projectList = document.getElementById('project-list');
+
+// Sentinel: HTML escaping function to prevent XSS
+const escapeHTML = (str) => {
+  if (str == null) return '';
+  return String(str).replace(/[&<>'"]/g,
+    tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag])
+  );
+};
+
+// Validate URL protocol to prevent javascript: XSS
+const sanitizeURL = (url) => {
+  const str = String(url);
+  if (str.toLowerCase().trim().startsWith('javascript:')) {
+    return 'about:blank';
+  }
+  return str;
+};
 const cursorGlow = document.querySelector('.cursor-glow');
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.getElementById('main-nav');
@@ -14,16 +37,16 @@ projectList.innerHTML = projects
         <div class="project-preview-wrap">
           <iframe
             class="project-preview"
-            src="${project.link}"
-            title="Preview ${project.name}"
+            src="${escapeHTML(sanitizeURL(project.link))}"
+            title="Preview ${escapeHTML(project.name)}"
             loading="lazy"
             referrerpolicy="no-referrer"
           ></iframe>
         </div>
-        <span class="tag">${project.type}</span>
-        <h3>${project.name}</h3>
-        <p>${project.description}</p>
-        <a href="${project.link}" target="_blank" rel="noreferrer noopener">Buka Full Project ↗</a>
+        <span class="tag">${escapeHTML(project.type)}</span>
+        <h3>${escapeHTML(project.name)}</h3>
+        <p>${escapeHTML(project.description)}</p>
+        <a href="${escapeHTML(sanitizeURL(project.link))}" target="_blank" rel="noreferrer noopener">Buka Full Project ↗</a>
       </article>
     `
   )
