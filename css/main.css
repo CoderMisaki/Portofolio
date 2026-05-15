@@ -50,7 +50,18 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .btn-secondary { background: white; color: var(--ink); border: 1px solid rgba(26,26,26,.15); }
 .hero-actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
 .hero-visual { position: relative; display: flex; flex-direction: column; align-items: center; }
-.hero-photo-wrap { position: relative; width: 100%; max-width: 340px; aspect-ratio: 1; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 2rem; z-index: 1; }
+.hero-photo-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
 .blob-bg {
   position: absolute;
   top: 0;
@@ -58,34 +69,31 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   width: 100%;
   height: 100%;
   background: linear-gradient(145deg, #ffe08a, #ffd067);
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  border-radius: 200px 200px 24px 24px;
   z-index: -1;
-  /* Geser blob kuning sedikit ke kiri bawah sebagai aksen/bayangan estetik */
-  transform: translate(-15px, 15px) rotate(-5deg);
+  transform: translate(-12px, 12px) rotate(-3deg);
   transition: all 1s ease;
 }
 
 .hero-photo-wrap:hover .blob-bg {
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  transform: translate(-10px, 10px) rotate(0deg);
+  border-radius: 180px 180px 32px 32px;
+  transform: translate(-6px, 6px) rotate(0deg);
 }
 
 .hero-photo-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%; /* Memastikan wajah kamu tetap di tengah dan tidak terpotong */
-  /* Memotong foto kotak menjadi bentuk organik (blob) */
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Shadow halus untuk efek melayang */
+  object-position: center 20%;
+  border-radius: 200px 200px 24px 24px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
   position: relative;
   z-index: 10;
   transition: all 1s ease;
 }
 
 .hero-photo-wrap:hover img {
-  /* Bentuk foto ikut bergerak organik saat di-hover, super smooth! */
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  border-radius: 180px 180px 32px 32px;
 }
 .freelance-badge { position: absolute; right: -20px; top: 40%; background: white; padding: 0.8rem 1.2rem; border-radius: 16px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 0.8rem; font-weight: 600; font-size: 0.85rem; line-height: 1.2; z-index: 2; border: 1px solid rgba(26,26,26,.05); }
 .freelance-badge .dot { width: 10px; height: 10px; background: var(--sage); border-radius: 50%; display: inline-block; box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2); }
