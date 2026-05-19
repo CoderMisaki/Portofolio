@@ -282,6 +282,37 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 .doodle-leaf { bottom: 10%; right: -10%; transform: rotate(15deg); }
 .about-skills-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 .about-me-column h2, .skills-column h2 { color: var(--sage); font-family: Sora, sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
+.skills-heading-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.skills-heading-row h2 { margin-bottom: 0; }
+.skills-plane-wrap {
+  position: relative;
+  width: 74px;
+  height: 36px;
+  color: rgba(76, 175, 80, 0.95);
+  flex-shrink: 0;
+  animation: skillsPlaneMove 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+.skills-plane-icon { position: absolute; right: 0; top: 5px; filter: drop-shadow(0 2px 4px rgba(26, 26, 26, 0.15)); }
+.skills-plane-smoke {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(76, 175, 80, 0.2);
+  animation: skillsSmoke 2.6s ease-out infinite;
+  will-change: transform, opacity;
+}
+.skills-plane-smoke.smoke-1 { left: 24px; top: 16px; width: 10px; height: 10px; }
+.skills-plane-smoke.smoke-2 { left: 12px; top: 13px; width: 14px; height: 14px; animation-delay: 0.25s; }
+.skills-plane-smoke.smoke-3 { left: 0; top: 10px; width: 18px; height: 18px; animation-delay: 0.5s; }
+@keyframes skillsPlaneMove {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+  50% { transform: translate3d(4px, -3px, 0) rotate(2deg); }
+}
+@keyframes skillsSmoke {
+  0% { opacity: 0.45; transform: translate3d(0,0,0) scale(0.8); }
+  80% { opacity: 0.12; transform: translate3d(-9px,-2px,0) scale(1.25); }
+  100% { opacity: 0; transform: translate3d(-12px,-3px,0) scale(1.35); }
+}
 .about-me-column p { font-size: 1.05rem; color: #4a4a4a; margin-bottom: 2rem; }
 .about-features { list-style: none; padding: 0; margin: 0 0 2.5rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
 .about-features li { display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; color: var(--ink); font-weight: 500; }
@@ -435,4 +466,14 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
   .stat-icon { width: 30px; height: 30px; }
   .stat-number { font-size: 1rem; }
   .stat-label { font-size: 0.68rem; }
+}
+
+@media (max-width: 768px) {
+  .skills-plane-wrap { width: 60px; height: 30px; }
+  .skills-plane-icon { width: 22px; height: 22px; top: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-plane-wrap,
+  .skills-plane-smoke { animation: none; }
 }
