@@ -65,6 +65,7 @@ const renderProjects = (projectItems) => {
       <article class="project-card works-card">
         <div class="project-preview-wrap works-preview">
           ${
+            // Menjaga isolasi proses agar halaman portfolio utama tidak ikut melambat.
             hasPreview
               ? `<iframe
                   class="project-preview"
